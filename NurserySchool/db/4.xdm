@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?><schema databaseDialect="H2">
+<tables>
+<table description="" name="MTD_USERS">
+<columns>
+<column description="" isPk="true" javaType="java.lang.String" name="USR_NAME" nullable="false" precision="10" scale="0" signed="true" size="200" type="12" typeName="VARCHAR"/>
+<column description="" isPk="false" javaType="java.lang.String" name="USR_PASSWD" nullable="true" precision="10" scale="0" signed="true" size="200" type="12" typeName="VARCHAR"/>
+<column description="" isPk="false" javaType="java.lang.String" name="USR_FORM" nullable="true" precision="10" scale="0" signed="true" size="200" type="12" typeName="VARCHAR"/>
+<column description="" isPk="false" javaType="java.lang.String" name="USR_CONTEXT" nullable="true" precision="10" scale="0" signed="true" size="200" type="12" typeName="VARCHAR"/>
+<column description="" isPk="false" javaType="java.lang.String" name="USR_ROLES" nullable="true" precision="10" scale="0" signed="true" size="200" type="12" typeName="VARCHAR"/>
+<column description="" isPk="false" javaType="java.lang.String" name="USR_PHONE" nullable="true" precision="10" scale="0" signed="true" size="200" type="12" typeName="VARCHAR"/>
+<column description="" isPk="false" javaType="java.lang.String" name="USR_EMAIL" nullable="true" precision="10" scale="0" signed="true" size="200" type="12" typeName="VARCHAR"/>
+</columns>
+<indexes>
+<index clustered="false" fKeyName="" hashed="false" isPKey="true" name="PRIMARY_KEY_6" unique="true">
+<indColumn ascending="true" name="USR_NAME" position="1"/>
+</index>
+</indexes>
+<primaryKey name="PRIMARY_KEY_6">
+<pkColumn pkField="USR_NAME" pkName="PRIMARY_KEY_6" pkSchema="PUBLIC" pkTable="MTD_USERS"/>
+</primaryKey>
+</table>
+<table description="" name="PARENTS">
+<columns>
+<column description="" isPk="true" javaType="java.math.BigDecimal" name="PARENT_ID" nullable="false" precision="10" scale="0" signed="true" size="18" type="3" typeName="DECIMAL"/>
+<column description="" isPk="false" javaType="java.lang.String" name="SURNAME" nullable="false" precision="10" scale="0" signed="true" size="100" type="12" typeName="VARCHAR"/>
+<column description="" isPk="false" javaType="java.lang.String" name="NAME" nullable="false" precision="10" scale="0" signed="true" size="100" type="12" typeName="VARCHAR"/>
+<column description="" isPk="false" javaType="java.lang.String" name="PATRONYMIC" nullable="true" precision="10" scale="0" signed="true" size="100" type="12" typeName="VARCHAR"/>
+<column description="" isPk="false" javaType="java.lang.String" name="TELEPHONE NUMBER" nullable="true" precision="10" scale="0" signed="true" size="100" type="12" typeName="VARCHAR"/>
+</columns>
+<indexes>
+<index clustered="false" fKeyName="" hashed="false" isPKey="true" name="PRIMARY_KEY_4" unique="true">
+<indColumn ascending="true" name="PARENT_ID" position="1"/>
+</index>
+</indexes>
+<primaryKey name="PRIMARY_KEY_4">
+<pkColumn pkField="PARENT_ID" pkName="PRIMARY_KEY_4" pkSchema="PUBLIC" pkTable="PARENTS"/>
+</primaryKey>
+</table>
+<table description="Children" name="CHILDREN">
+<columns>
+<column description="" isPk="true" javaType="java.math.BigDecimal" name="CHILD_ID" nullable="false" precision="10" scale="0" signed="true" size="18" type="3" typeName="DECIMAL"/>
+<column description="" isPk="false" javaType="java.lang.String" name="SURNAME" nullable="false" precision="10" scale="0" signed="true" size="100" type="12" typeName="VARCHAR"/>
+<column description="" isPk="false" javaType="java.lang.String" name="NAME" nullable="false" precision="10" scale="0" signed="true" size="100" type="12" typeName="VARCHAR"/>
+<column description="" isPk="false" javaType="java.lang.String" name="PATRONYMIC" nullable="true" precision="10" scale="0" signed="true" size="100" type="12" typeName="VARCHAR"/>
+<column description="" isPk="false" javaType="java.math.BigDecimal" name="NUMBER OF GROUP" nullable="false" precision="10" scale="0" signed="true" size="100" type="3" typeName="DECIMAL"/>
+<column description="" isPk="false" javaType="java.util.Date" name="DATE OF ENROLMENT" nullable="false" precision="10" scale="0" signed="true" size="8" type="91" typeName="DATE"/>
+<column description="" isPk="false" javaType="java.lang.String" name="ADDRESS RESIDENCE" nullable="true" precision="10" scale="0" signed="true" size="600" type="12" typeName="VARCHAR"/>
+<column description="" isPk="false" javaType="java.lang.String" name="REGISTRATION ADDRESS " nullable="false" precision="10" scale="0" signed="true" size="600" type="12" typeName="VARCHAR"/>
+<column description="" isPk="false" javaType="java.math.BigDecimal" name="ID OF PARENT1" nullable="true" precision="10" scale="0" signed="true" size="100" type="3" typeName="DECIMAL"/>
+<column description="" isPk="false" javaType="java.math.BigDecimal" name="ID PARENT2" nullable="true" precision="10" scale="0" signed="true" size="100" type="3" typeName="DECIMAL"/>
+</columns>
+<indexes>
+<index clustered="false" fKeyName="FK_138374642614075" hashed="false" isPKey="false" name="FK_138374642614075_INDEX_9" unique="false">
+<indColumn ascending="true" name="ID PARENT2" position="1"/>
+</index>
+<index clustered="false" fKeyName="FK_138380919746875" hashed="false" isPKey="false" name="FK_138380919746875_INDEX_9" unique="false">
+<indColumn ascending="true" name="NUMBER OF GROUP" position="1"/>
+</index>
+<index clustered="false" fKeyName="" hashed="false" isPKey="true" name="PRIMARY_KEY_9" unique="true">
+<indColumn ascending="true" name="CHILD_ID" position="1"/>
+</index>
+<index clustered="false" fKeyName="FK_138374643557875" hashed="false" isPKey="false" name="FK_138374643557875_INDEX_9" unique="false">
+<indColumn ascending="true" name="ID OF PARENT1" position="1"/>
+</index>
+</indexes>
+<primaryKey name="PRIMARY_KEY_9">
+<pkColumn pkField="CHILD_ID" pkName="PRIMARY_KEY_9" pkSchema="PUBLIC" pkTable="CHILDREN"/>
+</primaryKey>
+<foreignKeys>
+<foreignKey name="FK_138374765657828">
+<fkColumn fkDeferrable="false" fkDeleteRule="CASCADE" fkField="CHILD_ID" fkName="FK_138374765657828" fkSchema="PUBLIC" fkTable="CHILDREN" fkUpdateRule="CASCADE" pkField="CHILD_ID" pkName="PRIMARY_KEY_96" pkSchema="PUBLIC" pkTable="TRACK VISITS"/>
+</foreignKey>
+<foreignKey name="FK_138380919746875">
+<fkColumn fkDeferrable="false" fkDeleteRule="CASCADE" fkField="NUMBER OF GROUP" fkName="FK_138380919746875" fkSchema="PUBLIC" fkTable="CHILDREN" fkUpdateRule="CASCADE" pkField="GROUP_ID" pkName="PRIMARY_KEY_3E" pkSchema="PUBLIC" pkTable="GROUPS"/>
+</foreignKey>
+<foreignKey name="FK_138374642614075">
+<fkColumn fkDeferrable="false" fkDeleteRule="CASCADE" fkField="ID PARENT2" fkName="FK_138374642614075" fkSchema="PUBLIC" fkTable="CHILDREN" fkUpdateRule="CASCADE" pkField="PARENT_ID" pkName="PRIMARY_KEY_4" pkSchema="PUBLIC" pkTable="PARENTS"/>
+</foreignKey>
+<foreignKey name="FK_138374643557875">
+<fkColumn fkDeferrable="false" fkDeleteRule="CASCADE" fkField="ID OF PARENT1" fkName="FK_138374643557875" fkSchema="PUBLIC" fkTable="CHILDREN" fkUpdateRule="CASCADE" pkField="PARENT_ID" pkName="PRIMARY_KEY_4" pkSchema="PUBLIC" pkTable="PARENTS"/>
+</foreignKey>
+</foreignKeys>
+</table>
+<table description="" name="DUMMYTABLE">
+<columns>
+<column description="" isPk="false" javaType="java.math.BigDecimal" name="DUMMY" nullable="true" precision="10" scale="0" signed="true" size="18" type="3" typeName="DECIMAL"/>
+</columns>
+<indexes/>
+</table>
+<table description="" name="VISITINGS">
+<columns>
+<column description="" isPk="true" javaType="java.math.BigDecimal" name="ID OF CHILD" nullable="false" precision="10" scale="0" signed="true" size="18" type="3" typeName="DECIMAL"/>
+<column description="" isPk="false" javaType="java.util.Date" name="DATE OF ABSENCE" nullable="true" precision="10" scale="0" signed="true" size="8" type="91" typeName="DATE"/>
+</columns>
+<indexes>
+<index clustered="false" fKeyName="" hashed="false" isPKey="true" name="PRIMARY_KEY_D" unique="true">
+<indColumn ascending="true" name="ID OF CHILD" position="1"/>
+</index>
+</indexes>
+<primaryKey name="PRIMARY_KEY_D">
+<pkColumn pkField="ID OF CHILD" pkName="PRIMARY_KEY_D" pkSchema="PUBLIC" pkTable="VISITINGS"/>
+</primaryKey>
+<foreignKeys>
+<foreignKey name="FK_138444780471601">
+<fkColumn fkDeferrable="false" fkDeleteRule="CASCADE" fkField="ID OF CHILD" fkName="FK_138444780471601" fkSchema="PUBLIC" fkTable="VISITINGS" fkUpdateRule="CASCADE" pkField="CHILD_ID" pkName="PRIMARY_KEY_9" pkSchema="PUBLIC" pkTable="CHILDREN"/>
+</foreignKey>
+</foreignKeys>
+</table>
+<table description="" name="MTD_GROUPS">
+<columns>
+<column description="" isPk="false" javaType="java.lang.String" name="USR_NAME" nullable="false" precision="10" scale="0" signed="true" size="200" type="12" typeName="VARCHAR"/>
+<column description="" isPk="false" javaType="java.lang.String" name="GROUP_NAME" nullable="false" precision="10" scale="0" signed="true" size="200" type="12" typeName="VARCHAR"/>
+</columns>
+<indexes>
+<index clustered="false" fKeyName="MTD_GROUPS_USERS_FK" hashed="false" isPKey="false" name="MTD_GROUPS_USERS_FK_INDEX_D" unique="false">
+<indColumn ascending="true" name="USR_NAME" position="1"/>
+</index>
+</indexes>
+<foreignKeys>
+<foreignKey name="MTD_GROUPS_USERS_FK">
+<fkColumn fkDeferrable="false" fkDeleteRule="CASCADE" fkField="USR_NAME" fkName="MTD_GROUPS_USERS_FK" fkSchema="PUBLIC" fkTable="MTD_GROUPS" fkUpdateRule="CASCADE" pkField="USR_NAME" pkName="PRIMARY_KEY_6" pkSchema="PUBLIC" pkTable="MTD_USERS"/>
+</foreignKey>
+</foreignKeys>
+</table>
+<table description="" name="MTD_ENTITIES">
+<columns>
+<column description="" isPk="true" javaType="java.lang.String" name="MDENT_ID" nullable="false" precision="10" scale="0" signed="true" size="200" type="12" typeName="VARCHAR"/>
+<column description="" isPk="false" javaType="java.lang.String" name="MDENT_NAME" nullable="true" precision="10" scale="0" signed="true" size="200" type="12" typeName="VARCHAR"/>
+<column description="" isPk="false" javaType="java.math.BigDecimal" name="MDENT_TYPE" nullable="false" precision="10" scale="0" signed="true" size="18" type="3" typeName="DECIMAL"/>
+<column description="" isPk="false" javaType="com.bearsoft.rowset.compacts.CompactClob" name="MDENT_CONTENT_TXT" nullable="true" precision="10" scale="0" signed="true" size="2147483647" type="2005" typeName="CLOB"/>
+<column description="" isPk="false" javaType="java.lang.String" name="MDENT_PARENT_ID" nullable="true" precision="10" scale="0" signed="true" size="200" type="12" typeName="VARCHAR"/>
+<column description="" isPk="false" javaType="java.lang.Double" name="MDENT_ORDER" nullable="true" precision="10" scale="0" signed="true" size="17" type="8" typeName="DOUBLE"/>
+<column description="" isPk="false" javaType="java.math.BigDecimal" name="MDENT_CONTENT_TXT_SIZE" nullable="true" precision="10" scale="0" signed="true" size="18" type="3" typeName="DECIMAL"/>
+<column description="" isPk="false" javaType="java.math.BigDecimal" name="MDENT_CONTENT_TXT_CRC32" nullable="true" precision="10" scale="0" signed="true" size="18" type="3" typeName="DECIMAL"/>
+</columns>
+<indexes>
+<index clustered="false" fKeyName="" hashed="false" isPKey="false" name="MTD_NAMES_UNIQUE_INDEX_C" unique="true">
+<indColumn ascending="true" name="MDENT_PARENT_ID" position="1"/>
+<indColumn ascending="true" name="MDENT_NAME" position="2"/>
+</index>
+<index clustered="false" fKeyName="MTD_ENTITIES_FK61240574157171" hashed="false" isPKey="false" name="MTD_ENTITIES_FK61240574157171_INDEX_C" unique="false">
+<indColumn ascending="true" name="MDENT_PARENT_ID" position="1"/>
+</index>
+<index clustered="false" fKeyName="" hashed="false" isPKey="true" name="PRIMARY_KEY_C" unique="true">
+<indColumn ascending="true" name="MDENT_ID" position="1"/>
+</index>
+</indexes>
+<primaryKey name="PRIMARY_KEY_C">
+<pkColumn pkField="MDENT_ID" pkName="PRIMARY_KEY_C" pkSchema="PUBLIC" pkTable="MTD_ENTITIES"/>
+</primaryKey>
+<foreignKeys>
+<foreignKey name="MTD_ENTITIES_FK61240574157171">
+<fkColumn fkDeferrable="false" fkDeleteRule="CASCADE" fkField="MDENT_PARENT_ID" fkName="MTD_ENTITIES_FK61240574157171" fkSchema="PUBLIC" fkTable="MTD_ENTITIES" fkUpdateRule="CASCADE" pkField="MDENT_ID" pkName="PRIMARY_KEY_C" pkSchema="PUBLIC" pkTable="MTD_ENTITIES"/>
+</foreignKey>
+</foreignKeys>
+</table>
+<table description="" name="STAFF">
+<columns>
+<column description="" isPk="true" javaType="java.math.BigDecimal" name="SAFF_ID" nullable="false" precision="10" scale="0" signed="true" size="18" type="3" typeName="DECIMAL"/>
+<column description="" isPk="false" javaType="java.lang.String" name="SURNAME" nullable="false" precision="10" scale="0" signed="true" size="100" type="12" typeName="VARCHAR"/>
+<column description="" isPk="false" javaType="java.lang.String" name="NAME" nullable="false" precision="10" scale="0" signed="true" size="100" type="12" typeName="VARCHAR"/>
+<column description="" isPk="false" javaType="java.lang.String" name="PATRONYMIC" nullable="true" precision="10" scale="0" signed="true" size="100" type="12" typeName="VARCHAR"/>
+<column description="" isPk="false" javaType="java.lang.String" name="SPECIALITY" nullable="false" precision="10" scale="0" signed="true" size="100" type="12" typeName="VARCHAR"/>
+<column description="" isPk="false" javaType="java.lang.String" name="REGISTRATION ADDRESS" nullable="false" precision="10" scale="0" signed="true" size="600" type="12" typeName="VARCHAR"/>
+<column description="" isPk="false" javaType="java.lang.String" name="TELEPHONE NUMBER" nullable="true" precision="10" scale="0" signed="true" size="100" type="12" typeName="VARCHAR"/>
+</columns>
+<indexes>
+<index clustered="false" fKeyName="" hashed="false" isPKey="true" name="PRIMARY_KEY_A" unique="true">
+<indColumn ascending="true" name="SAFF_ID" position="1"/>
+</index>
+</indexes>
+<primaryKey name="PRIMARY_KEY_A">
+<pkColumn pkField="SAFF_ID" pkName="PRIMARY_KEY_A" pkSchema="PUBLIC" pkTable="STAFF"/>
+</primaryKey>
+</table>
+<table description="No visits" name="TRACK VISITS">
+<columns>
+<column description="" isPk="true" javaType="java.math.BigDecimal" name="CHILD_ID" nullable="false" precision="10" scale="0" signed="true" size="18" type="3" typeName="DECIMAL"/>
+<column description="" isPk="false" javaType="java.util.Date" name="DATE" nullable="true" precision="10" scale="0" signed="true" size="8" type="91" typeName="DATE"/>
+</columns>
+<indexes>
+<index clustered="false" fKeyName="" hashed="false" isPKey="true" name="PRIMARY_KEY_96" unique="true">
+<indColumn ascending="true" name="CHILD_ID" position="1"/>
+</index>
+</indexes>
+<primaryKey name="PRIMARY_KEY_96">
+<pkColumn pkField="CHILD_ID" pkName="PRIMARY_KEY_96" pkSchema="PUBLIC" pkTable="TRACK VISITS"/>
+</primaryKey>
+</table>
+<table description="" name="PAYMENT">
+<columns>
+<column description="" isPk="true" javaType="java.math.BigDecimal" name="ID OF CHILD" nullable="false" precision="10" scale="0" signed="true" size="18" type="3" typeName="DECIMAL"/>
+<column description="" isPk="false" javaType="java.lang.String" name="MONTH" nullable="false" precision="10" scale="0" signed="true" size="100" type="12" typeName="VARCHAR"/>
+<column description="" isPk="false" javaType="java.lang.String" name="PAYMENT STATUS " nullable="true" precision="10" scale="0" signed="true" size="100" type="12" typeName="VARCHAR"/>
+</columns>
+<indexes>
+<index clustered="false" fKeyName="" hashed="false" isPKey="true" name="PRIMARY_KEY_406" unique="true">
+<indColumn ascending="true" name="ID OF CHILD" position="1"/>
+</index>
+</indexes>
+<primaryKey name="PRIMARY_KEY_406">
+<pkColumn pkField="ID OF CHILD" pkName="PRIMARY_KEY_406" pkSchema="PUBLIC" pkTable="PAYMENT"/>
+</primaryKey>
+<foreignKeys>
+<foreignKey name="FK_138444843613816">
+<fkColumn fkDeferrable="false" fkDeleteRule="CASCADE" fkField="ID OF CHILD" fkName="FK_138444843613816" fkSchema="PUBLIC" fkTable="PAYMENT" fkUpdateRule="CASCADE" pkField="CHILD_ID" pkName="PRIMARY_KEY_9" pkSchema="PUBLIC" pkTable="CHILDREN"/>
+</foreignKey>
+</foreignKeys>
+</table>
+<table description="" name="GROUPS">
+<columns>
+<column description="" isPk="true" javaType="java.math.BigDecimal" name="GROUP_ID" nullable="false" precision="10" scale="0" signed="true" size="18" type="3" typeName="DECIMAL"/>
+<column description="" isPk="false" javaType="java.lang.String" name="NAME" nullable="false" precision="10" scale="0" signed="true" size="100" type="12" typeName="VARCHAR"/>
+</columns>
+<indexes>
+<index clustered="false" fKeyName="" hashed="false" isPKey="true" name="PRIMARY_KEY_3E" unique="true">
+<indColumn ascending="true" name="GROUP_ID" position="1"/>
+</index>
+</indexes>
+<primaryKey name="PRIMARY_KEY_3E">
+<pkColumn pkField="GROUP_ID" pkName="PRIMARY_KEY_3E" pkSchema="PUBLIC" pkTable="GROUPS"/>
+</primaryKey>
+<foreignKeys>
+<foreignKey name="FK_138380906356202">
+<fkColumn fkDeferrable="false" fkDeleteRule="CASCADE" fkField="GROUP_ID" fkName="FK_138380906356202" fkSchema="PUBLIC" fkTable="GROUPS" fkUpdateRule="CASCADE" pkField="GROUP_ID" pkName="PRIMARY_KEY_38" pkSchema="PUBLIC" pkTable="COMMISIONS"/>
+</foreignKey>
+</foreignKeys>
+</table>
+<table description="" name="COMMISIONS">
+<columns>
+<column description="" isPk="true" javaType="java.math.BigDecimal" name="GROUP_ID" nullable="false" precision="10" scale="0" signed="true" size="18" type="3" typeName="DECIMAL"/>
+<column description="" isPk="false" javaType="java.math.BigDecimal" name="ID OF TEACHER" nullable="false" precision="10" scale="0" signed="true" size="18" type="3" typeName="DECIMAL"/>
+</columns>
+<indexes>
+<index clustered="false" fKeyName="" hashed="false" isPKey="true" name="PRIMARY_KEY_38" unique="true">
+<indColumn ascending="true" name="GROUP_ID" position="1"/>
+</index>
+<index clustered="false" fKeyName="FK_138380939018729" hashed="false" isPKey="false" name="FK_138380939018729_INDEX_5" unique="false">
+<indColumn ascending="true" name="ID OF TEACHER" position="1"/>
+</index>
+</indexes>
+<primaryKey name="PRIMARY_KEY_38">
+<pkColumn pkField="GROUP_ID" pkName="PRIMARY_KEY_38" pkSchema="PUBLIC" pkTable="COMMISIONS"/>
+</primaryKey>
+<foreignKeys>
+<foreignKey name="FK_138380939018729">
+<fkColumn fkDeferrable="false" fkDeleteRule="CASCADE" fkField="ID OF TEACHER" fkName="FK_138380939018729" fkSchema="PUBLIC" fkTable="COMMISIONS" fkUpdateRule="CASCADE" pkField="SAFF_ID" pkName="PRIMARY_KEY_A" pkSchema="PUBLIC" pkTable="STAFF"/>
+</foreignKey>
+</foreignKeys>
+</table>
+<table description="" name="MTD_VERSION">
+<columns>
+<column description="" isPk="true" javaType="java.math.BigDecimal" name="VERSION_VALUE" nullable="false" precision="10" scale="0" signed="true" size="18" type="3" typeName="DECIMAL"/>
+</columns>
+<indexes>
+<index clustered="false" fKeyName="" hashed="false" isPKey="true" name="PRIMARY_KEY_1" unique="true">
+<indColumn ascending="true" name="VERSION_VALUE" position="1"/>
+</index>
+</indexes>
+<primaryKey name="PRIMARY_KEY_1">
+<pkColumn pkField="VERSION_VALUE" pkName="PRIMARY_KEY_1" pkSchema="PUBLIC" pkTable="MTD_VERSION"/>
+</primaryKey>
+</table>
+</tables>
+</schema>

@@ -1,0 +1,712 @@
+<?xml version="1.0" encoding="UTF-8"?><layout defaultCloseOperation="2" name="Form" prefHeight="415px" prefWidth="765px">
+  <widget name="BasicPanel" parent="Form" prefHeight="413px" prefWidth="763px" type="TabsDesignInfo">
+    <border bevelType="1" highlightBevelInnerColor="#000000" highlightBevelOuterColor="#000000" shadowBevelInnerColor="#000000" shadowBevelOuterColor="#000000" type="SoftBevelBorderDesignInfo"/>
+    <constraints bottom="2px" left="0px" right="2px" top="0px" type="MarginConstraintsDesignInfo"/>
+    <easFont name="Tahoma"/>
+  </widget>
+  <widget name="Parents" parent="BasicPanel" prefHeight="378px" prefWidth="752px" type="PanelDesignInfo">
+    <layout type="MarginLayoutDesignInfo"/>
+    <constraints tabTitle="Родители" type="TabsConstraintsDesignInfo"/>
+  </widget>
+  <widget name="modelGrid3" parent="Parents" prefHeight="216px" prefWidth="732px" type="DbGridDesignInfo">
+    <rowsColumnsDesignInfo>
+      <rowsDatasource entityId="138444880371649" field="false"/>
+    </rowsColumnsDesignInfo>
+    <treeDesignInfo/>
+    <column name="Номер родителя">
+      <columnsDatasource/>
+      <columnsDisplayField/>
+      <cellsDatasource/>
+      <cellDesignInfo>
+        <rowsKeyField/>
+        <columnsKeyField/>
+        <cellValueField/>
+      </cellDesignInfo>
+      <controlInfo classHint="DbSpinDesignInfo" name="view" prefHeight="0px" prefWidth="0px"/>
+      <headerStyle>
+        <nativeFont name="Tahoma" size="11"/>
+      </headerStyle>
+      <datamodelElement entityId="138444880371649" fieldName="PARENT_ID"/>
+    </column>
+    <column name="фамилия">
+      <columnsDatasource/>
+      <columnsDisplayField/>
+      <cellsDatasource/>
+      <cellDesignInfo>
+        <rowsKeyField/>
+        <columnsKeyField/>
+        <cellValueField/>
+      </cellDesignInfo>
+      <controlInfo classHint="DbLabelDesignInfo" name="view" prefHeight="0px" prefWidth="0px"/>
+      <headerStyle>
+        <nativeFont name="Tahoma" size="11"/>
+      </headerStyle>
+      <datamodelElement entityId="138444880371649" fieldName="SURNAME"/>
+    </column>
+    <column name="Имя ">
+      <columnsDatasource/>
+      <columnsDisplayField/>
+      <cellsDatasource/>
+      <cellDesignInfo>
+        <rowsKeyField/>
+        <columnsKeyField/>
+        <cellValueField/>
+      </cellDesignInfo>
+      <controlInfo classHint="DbLabelDesignInfo" name="view" prefHeight="0px" prefWidth="0px"/>
+      <headerStyle>
+        <nativeFont name="Tahoma" size="11"/>
+      </headerStyle>
+      <datamodelElement entityId="138444880371649" fieldName="NAME"/>
+    </column>
+    <column name="отчество">
+      <columnsDatasource/>
+      <columnsDisplayField/>
+      <cellsDatasource/>
+      <cellDesignInfo>
+        <rowsKeyField/>
+        <columnsKeyField/>
+        <cellValueField/>
+      </cellDesignInfo>
+      <controlInfo classHint="DbLabelDesignInfo" name="view" prefHeight="0px" prefWidth="0px"/>
+      <headerStyle>
+        <nativeFont name="Tahoma" size="11"/>
+      </headerStyle>
+      <datamodelElement entityId="138444880371649" fieldName="PATRONYMIC"/>
+    </column>
+    <column name="Номер телефона">
+      <columnsDatasource/>
+      <columnsDisplayField/>
+      <cellsDatasource/>
+      <cellDesignInfo>
+        <rowsKeyField/>
+        <columnsKeyField/>
+        <cellValueField/>
+      </cellDesignInfo>
+      <controlInfo classHint="DbLabelDesignInfo" name="view" prefHeight="0px" prefWidth="0px"/>
+      <headerStyle>
+        <nativeFont name="Tahoma" size="11"/>
+      </headerStyle>
+      <datamodelElement entityId="138444880371649" fieldName="TELEPHONE NUMBER"/>
+    </column>
+    <constraints bottom="150px" left="12px" right="8px" top="12px" type="MarginConstraintsDesignInfo"/>
+  </widget>
+  <widget name="button9" parent="Parents" prefHeight="23px" prefWidth="96px" text="Найти" type="ButtonDesignInfo">
+    <constraints bottom="43px" height="23px" left="12px" type="MarginConstraintsDesignInfo" width="96px"/>
+  </widget>
+  <widget name="textField2" parent="Parents" prefHeight="20px" prefWidth="264px" type="TextFieldDesignInfo">
+    <constraints bottom="43px" height="20px" left="120px" type="MarginConstraintsDesignInfo" width="264px"/>
+  </widget>
+  <widget name="button16" parent="Parents" prefHeight="23px" prefWidth="144px" text="Добавить" type="ButtonDesignInfo">
+    <constraints bottom="91px" height="23px" left="12px" type="MarginConstraintsDesignInfo" width="144px"/>
+  </widget>
+  <widget name="button17" parent="Parents" prefHeight="23px" prefWidth="144px" text="Удалить" type="ButtonDesignInfo">
+    <constraints bottom="91px" height="23px" left="168px" type="MarginConstraintsDesignInfo" width="144px"/>
+  </widget>
+  <widget name="button18" parent="Parents" prefHeight="23px" prefWidth="144px" text="Сохранить" type="ButtonDesignInfo">
+    <constraints bottom="91px" height="23px" left="324px" type="MarginConstraintsDesignInfo" width="144px"/>
+  </widget>
+  <widget name="button24" parent="Parents" prefHeight="23px" prefWidth="156px" text="Показать всех" type="ButtonDesignInfo">
+    <constraints bottom="43px" height="23px" left="468px" type="MarginConstraintsDesignInfo" width="156px"/>
+  </widget>
+  <widget name="Children" parent="BasicPanel" prefHeight="378px" prefWidth="752px" type="PanelDesignInfo" visible="false">
+    <layout type="MarginLayoutDesignInfo"/>
+    <constraints tabTitle="Воспитанники" type="TabsConstraintsDesignInfo"/>
+  </widget>
+  <widget name="modelGrid" parent="Children" prefHeight="258px" prefWidth="733px" type="DbGridDesignInfo">
+    <rowsColumnsDesignInfo>
+      <rowsDatasource entityId="138440513046826" field="false"/>
+    </rowsColumnsDesignInfo>
+    <treeDesignInfo/>
+    <column name="Номер воспитанника">
+      <columnsDatasource/>
+      <columnsDisplayField/>
+      <cellsDatasource/>
+      <cellDesignInfo>
+        <rowsKeyField/>
+        <columnsKeyField/>
+        <cellValueField/>
+      </cellDesignInfo>
+      <controlInfo classHint="DbSpinDesignInfo" name="view" prefHeight="0px" prefWidth="0px"/>
+      <headerStyle>
+        <nativeFont name="Tahoma" size="11"/>
+      </headerStyle>
+      <datamodelElement entityId="138440513046826" fieldName="CHILD_ID"/>
+    </column>
+    <column name="Фамилия">
+      <columnsDatasource/>
+      <columnsDisplayField/>
+      <cellsDatasource/>
+      <cellDesignInfo>
+        <rowsKeyField/>
+        <columnsKeyField/>
+        <cellValueField/>
+      </cellDesignInfo>
+      <controlInfo classHint="DbLabelDesignInfo" name="view" prefHeight="0px" prefWidth="0px"/>
+      <headerStyle>
+        <nativeFont name="Tahoma" size="11"/>
+      </headerStyle>
+      <datamodelElement entityId="138440513046826" fieldName="SURNAME"/>
+    </column>
+    <column name="Имя">
+      <columnsDatasource/>
+      <columnsDisplayField/>
+      <cellsDatasource/>
+      <cellDesignInfo>
+        <rowsKeyField/>
+        <columnsKeyField/>
+        <cellValueField/>
+      </cellDesignInfo>
+      <controlInfo classHint="DbLabelDesignInfo" name="view" prefHeight="0px" prefWidth="0px"/>
+      <headerStyle>
+        <nativeFont name="Tahoma" size="11"/>
+      </headerStyle>
+      <datamodelElement entityId="138440513046826" fieldName="NAME"/>
+    </column>
+    <column name="Отчество">
+      <columnsDatasource/>
+      <columnsDisplayField/>
+      <cellsDatasource/>
+      <cellDesignInfo>
+        <rowsKeyField/>
+        <columnsKeyField/>
+        <cellValueField/>
+      </cellDesignInfo>
+      <controlInfo classHint="DbLabelDesignInfo" name="view" prefHeight="0px" prefWidth="0px"/>
+      <headerStyle>
+        <nativeFont name="Tahoma" size="11"/>
+      </headerStyle>
+      <datamodelElement entityId="138440513046826" fieldName="PATRONYMIC"/>
+    </column>
+    <column name="Номер группы">
+      <columnsDatasource/>
+      <columnsDisplayField/>
+      <cellsDatasource/>
+      <cellDesignInfo>
+        <rowsKeyField/>
+        <columnsKeyField/>
+        <cellValueField/>
+      </cellDesignInfo>
+      <controlInfo classHint="DbSpinDesignInfo" name="view" prefHeight="0px" prefWidth="0px"/>
+      <headerStyle>
+        <nativeFont name="Tahoma" size="11"/>
+      </headerStyle>
+      <datamodelElement entityId="138440513046826" fieldName="NUMBER OF GROUP"/>
+    </column>
+    <column name="Дата поступления">
+      <columnsDatasource/>
+      <columnsDisplayField/>
+      <cellsDatasource/>
+      <cellDesignInfo>
+        <rowsKeyField/>
+        <columnsKeyField/>
+        <cellValueField/>
+      </cellDesignInfo>
+      <controlInfo classHint="DbDateDesignInfo" dateFormat="dd.MM.yyyy HH:mm:ss" name="view" prefHeight="0px" prefWidth="0px"/>
+      <headerStyle>
+        <nativeFont name="Tahoma" size="11"/>
+      </headerStyle>
+      <datamodelElement entityId="138440513046826" fieldName="DATE OF ENROLMENT"/>
+    </column>
+    <column name="Адрес проживания">
+      <columnsDatasource/>
+      <columnsDisplayField/>
+      <cellsDatasource/>
+      <cellDesignInfo>
+        <rowsKeyField/>
+        <columnsKeyField/>
+        <cellValueField/>
+      </cellDesignInfo>
+      <controlInfo classHint="DbLabelDesignInfo" name="view" prefHeight="0px" prefWidth="0px"/>
+      <headerStyle>
+        <nativeFont name="Tahoma" size="11"/>
+      </headerStyle>
+      <datamodelElement entityId="138440513046826" fieldName="ADDRESS RESIDENCE"/>
+    </column>
+    <column name="Адрес регистрации">
+      <columnsDatasource/>
+      <columnsDisplayField/>
+      <cellsDatasource/>
+      <cellDesignInfo>
+        <rowsKeyField/>
+        <columnsKeyField/>
+        <cellValueField/>
+      </cellDesignInfo>
+      <controlInfo classHint="DbLabelDesignInfo" name="view" prefHeight="0px" prefWidth="0px"/>
+      <headerStyle>
+        <nativeFont name="Tahoma" size="11"/>
+      </headerStyle>
+      <datamodelElement entityId="138440513046826" fieldName="REGISTRATION ADDRESS "/>
+    </column>
+    <column name="Номер родителя 1">
+      <columnsDatasource/>
+      <columnsDisplayField/>
+      <cellsDatasource/>
+      <cellDesignInfo>
+        <rowsKeyField/>
+        <columnsKeyField/>
+        <cellValueField/>
+      </cellDesignInfo>
+      <controlInfo classHint="DbSpinDesignInfo" name="view" prefHeight="0px" prefWidth="0px"/>
+      <headerStyle>
+        <nativeFont name="Tahoma" size="11"/>
+      </headerStyle>
+      <datamodelElement entityId="138440513046826" fieldName="ID OF PARENT1"/>
+    </column>
+    <column name="Номер родителя 2">
+      <columnsDatasource/>
+      <columnsDisplayField/>
+      <cellsDatasource/>
+      <cellDesignInfo>
+        <rowsKeyField/>
+        <columnsKeyField/>
+        <cellValueField/>
+      </cellDesignInfo>
+      <controlInfo classHint="DbSpinDesignInfo" name="view" prefHeight="0px" prefWidth="0px"/>
+      <headerStyle>
+        <nativeFont name="Tahoma" size="11"/>
+      </headerStyle>
+      <datamodelElement entityId="138440513046826" fieldName="ID PARENT2"/>
+    </column>
+    <constraints bottom="108px" left="12px" right="7px" top="12px" type="MarginConstraintsDesignInfo"/>
+  </widget>
+  <widget actionPerformed="НайтиActionPerformed" name="Найти" parent="Children" prefHeight="23px" prefWidth="84px" text="Найти" type="ButtonDesignInfo">
+    <constraints bottom="21px" height="23px" left="12px" type="MarginConstraintsDesignInfo" width="84px"/>
+  </widget>
+  <widget actionPerformed="Поиск по воспитанникамActionPerformed" name="Поиск по воспитанникам" parent="Children" prefHeight="23px" prefWidth="216px" type="TextFieldDesignInfo">
+    <constraints bottom="21px" height="23px" left="108px" type="MarginConstraintsDesignInfo" width="216px"/>
+  </widget>
+  <widget name="Add" parent="Children" prefHeight="23px" prefWidth="156px" text="Добавить" type="ButtonDesignInfo">
+    <constraints bottom="59px" height="23px" left="12px" type="MarginConstraintsDesignInfo" width="156px"/>
+  </widget>
+  <widget actionPerformed="DeleteActionPerformed" name="Delete" parent="Children" prefHeight="23px" prefWidth="156px" text="Удалить" type="ButtonDesignInfo">
+    <constraints bottom="59px" height="23px" left="168px" type="MarginConstraintsDesignInfo" width="156px"/>
+  </widget>
+  <widget name="Save" parent="Children" prefHeight="23px" prefWidth="156px" text="Сохранить" type="ButtonDesignInfo">
+    <constraints bottom="59px" height="23px" left="324px" type="MarginConstraintsDesignInfo" width="156px"/>
+  </widget>
+  <widget name="button23" parent="Children" prefHeight="23px" prefWidth="156px" text="Показать всех" type="ButtonDesignInfo">
+    <constraints bottom="19px" height="23px" left="480px" type="MarginConstraintsDesignInfo" width="156px"/>
+  </widget>
+  <widget name="Payment" parent="BasicPanel" prefHeight="378px" prefWidth="752px" type="PanelDesignInfo" visible="false">
+    <layout type="MarginLayoutDesignInfo"/>
+    <constraints tabTitle="Оплата" type="TabsConstraintsDesignInfo"/>
+  </widget>
+  <widget name="modelGrid1" parent="Payment" prefHeight="276px" prefWidth="528px" type="DbGridDesignInfo">
+    <rowsColumnsDesignInfo>
+      <rowsDatasource entityId="138444881806074" field="false"/>
+    </rowsColumnsDesignInfo>
+    <treeDesignInfo/>
+    <column name="Номер воспитанника">
+      <columnsDatasource/>
+      <columnsDisplayField/>
+      <cellsDatasource/>
+      <cellDesignInfo>
+        <rowsKeyField/>
+        <columnsKeyField/>
+        <cellValueField/>
+      </cellDesignInfo>
+      <controlInfo classHint="DbSpinDesignInfo" name="view" prefHeight="0px" prefWidth="0px"/>
+      <headerStyle>
+        <nativeFont name="Tahoma" size="11"/>
+      </headerStyle>
+      <datamodelElement entityId="138444881806074" fieldName="ID OF CHILD"/>
+    </column>
+    <column name="Месяц">
+      <columnsDatasource/>
+      <columnsDisplayField/>
+      <cellsDatasource/>
+      <cellDesignInfo>
+        <rowsKeyField/>
+        <columnsKeyField/>
+        <cellValueField/>
+      </cellDesignInfo>
+      <controlInfo classHint="DbLabelDesignInfo" name="view" prefHeight="0px" prefWidth="0px"/>
+      <headerStyle>
+        <nativeFont name="Tahoma" size="11"/>
+      </headerStyle>
+      <datamodelElement entityId="138444881806074" fieldName="MONTH"/>
+    </column>
+    <column name="Статус оплаты">
+      <columnsDatasource/>
+      <columnsDisplayField/>
+      <cellsDatasource/>
+      <cellDesignInfo>
+        <rowsKeyField/>
+        <columnsKeyField/>
+        <cellValueField/>
+      </cellDesignInfo>
+      <controlInfo classHint="DbLabelDesignInfo" name="view" prefHeight="0px" prefWidth="0px"/>
+      <headerStyle>
+        <nativeFont name="Tahoma" size="11"/>
+      </headerStyle>
+      <datamodelElement entityId="138444881806074" fieldName="PAYMENT STATUS "/>
+    </column>
+    <constraints bottom="90px" left="216px" right="8px" top="12px" type="MarginConstraintsDesignInfo"/>
+  </widget>
+  <widget name="button" parent="Payment" prefHeight="23px" prefWidth="156px" text="Добавить" type="ButtonDesignInfo">
+    <constraints height="23px" left="24px" top="12px" type="MarginConstraintsDesignInfo" width="156px"/>
+  </widget>
+  <widget name="button1" parent="Payment" prefHeight="23px" prefWidth="156px" text="Удалить" toolTipText="&lt;нулевое значение&gt;" type="ButtonDesignInfo">
+    <constraints height="23px" left="24px" top="48px" type="MarginConstraintsDesignInfo" width="156px"/>
+  </widget>
+  <widget name="button2" parent="Payment" prefHeight="23px" prefWidth="156px" text="Сохранить" type="ButtonDesignInfo">
+    <constraints height="23px" left="24px" top="84px" type="MarginConstraintsDesignInfo" width="156px"/>
+  </widget>
+  <widget name="button3" parent="Payment" prefHeight="23px" prefWidth="108px" text="Найти" toolTipText="&lt;нулевое значение&gt;" type="ButtonDesignInfo">
+    <constraints bottom="43px" height="23px" left="24px" type="MarginConstraintsDesignInfo" width="108px"/>
+  </widget>
+  <widget name="textField" parent="Payment" prefHeight="23px" prefWidth="264px" type="TextFieldDesignInfo">
+    <constraints bottom="43px" height="23px" left="144px" type="MarginConstraintsDesignInfo" width="264px"/>
+  </widget>
+  <widget actionPerformed="checkBoxActionPerformed" name="checkBox" parent="Payment" prefHeight="23px" prefWidth="96px" text="Оплачено" type="CheckDesignInfo">
+    <constraints height="23px" left="96px" top="120px" type="MarginConstraintsDesignInfo" width="96px"/>
+  </widget>
+  <widget name="checkBox1" parent="Payment" prefHeight="23px" prefWidth="96px" text="Не оплачено" type="CheckDesignInfo">
+    <constraints height="23px" left="96px" top="144px" type="MarginConstraintsDesignInfo" width="96px"/>
+  </widget>
+  <widget name="label" parent="Payment" prefHeight="14px" prefWidth="60px" text="Количество" type="LabelDesignInfo">
+    <constraints height="14px" left="24px" top="120px" type="MarginConstraintsDesignInfo" width="60px"/>
+  </widget>
+  <widget name="button25" parent="Payment" prefHeight="23px" prefWidth="156px" text="Показать всех" type="ButtonDesignInfo">
+    <constraints height="23px" left="24px" top="240px" type="MarginConstraintsDesignInfo" width="156px"/>
+  </widget>
+  <widget name="Visitings" parent="BasicPanel" prefHeight="378px" prefWidth="752px" type="PanelDesignInfo" visible="false">
+    <layout type="MarginLayoutDesignInfo"/>
+    <constraints tabTitle="Учет посещений" type="TabsConstraintsDesignInfo"/>
+  </widget>
+  <widget name="modelGrid2" parent="Visitings" prefHeight="348px" prefWidth="288px" type="DbGridDesignInfo">
+    <rowsColumnsDesignInfo>
+      <rowsDatasource entityId="138444891018509" field="false"/>
+    </rowsColumnsDesignInfo>
+    <treeDesignInfo/>
+    <column name="Номер вопитанника">
+      <columnsDatasource/>
+      <columnsDisplayField/>
+      <cellsDatasource/>
+      <cellDesignInfo>
+        <rowsKeyField/>
+        <columnsKeyField/>
+        <cellValueField/>
+      </cellDesignInfo>
+      <controlInfo classHint="DbSpinDesignInfo" name="view" prefHeight="0px" prefWidth="0px"/>
+      <headerStyle>
+        <nativeFont name="Tahoma" size="11"/>
+      </headerStyle>
+      <datamodelElement entityId="138444891018509" fieldName="ID OF CHILD"/>
+    </column>
+    <column name="Дата отсутствия">
+      <columnsDatasource/>
+      <columnsDisplayField/>
+      <cellsDatasource/>
+      <cellDesignInfo>
+        <rowsKeyField/>
+        <columnsKeyField/>
+        <cellValueField/>
+      </cellDesignInfo>
+      <controlInfo classHint="DbDateDesignInfo" dateFormat="dd.MM.yyyy HH:mm:ss" name="view" prefHeight="0px" prefWidth="0px"/>
+      <headerStyle>
+        <nativeFont name="Tahoma" size="11"/>
+      </headerStyle>
+      <datamodelElement entityId="138444891018509" fieldName="DATE OF ABSENCE"/>
+    </column>
+    <constraints bottom="18px" left="444px" right="20px" top="12px" type="MarginConstraintsDesignInfo"/>
+  </widget>
+  <widget name="button4" parent="Visitings" prefHeight="23px" prefWidth="132px" text="Добавить" type="ButtonDesignInfo">
+    <constraints height="23px" left="12px" top="12px" type="MarginConstraintsDesignInfo" width="132px"/>
+  </widget>
+  <widget name="button5" parent="Visitings" prefHeight="23px" prefWidth="132px" text="Удалить" toolTipText="&lt;нулевое значение&gt;" type="ButtonDesignInfo">
+    <constraints height="23px" left="12px" top="48px" type="MarginConstraintsDesignInfo" width="132px"/>
+  </widget>
+  <widget name="button6" parent="Visitings" prefHeight="23px" prefWidth="132px" text="Сохранить" type="ButtonDesignInfo">
+    <constraints height="23px" left="12px" top="84px" type="MarginConstraintsDesignInfo" width="132px"/>
+  </widget>
+  <widget actionPerformed="button7ActionPerformed" name="button7" parent="Visitings" prefHeight="23px" prefWidth="84px" text="Найти" type="ButtonDesignInfo">
+    <constraints height="23px" left="12px" top="240px" type="MarginConstraintsDesignInfo" width="84px"/>
+  </widget>
+  <widget name="textField1" parent="Visitings" prefHeight="20px" prefWidth="192px" type="TextFieldDesignInfo">
+    <constraints height="20px" left="108px" top="240px" type="MarginConstraintsDesignInfo" width="192px"/>
+  </widget>
+  <widget dateFormat="dd.MM.yyyy" name="modelDate" parent="Visitings" prefHeight="20px" prefWidth="132px" type="DbDateDesignInfo">
+    <constraints height="20px" left="12px" top="132px" type="MarginConstraintsDesignInfo" width="132px"/>
+  </widget>
+  <widget name="button8" parent="Visitings" prefHeight="23px" prefWidth="96px" text="Показать" type="ButtonDesignInfo">
+    <constraints height="23px" left="156px" top="132px" type="MarginConstraintsDesignInfo" width="96px"/>
+  </widget>
+  <widget name="label1" parent="Visitings" prefHeight="14px" prefWidth="192px" text="Количество пропусков за период:" type="LabelDesignInfo">
+    <constraints height="14px" left="12px" top="168px" type="MarginConstraintsDesignInfo" width="192px"/>
+  </widget>
+  <widget name="textField3" parent="Visitings" prefHeight="20px" prefWidth="108px" type="TextFieldDesignInfo">
+    <constraints height="20px" left="36px" top="192px" type="MarginConstraintsDesignInfo" width="108px"/>
+  </widget>
+  <widget actionPerformed="textField4ActionPerformed" name="textField4" parent="Visitings" prefHeight="20px" prefWidth="108px" type="TextFieldDesignInfo">
+    <constraints height="20px" left="180px" top="192px" type="MarginConstraintsDesignInfo" width="108px"/>
+  </widget>
+  <widget name="label2" parent="Visitings" prefHeight="14px" prefWidth="12px" text="с :" type="LabelDesignInfo">
+    <constraints height="14px" left="12px" top="192px" type="MarginConstraintsDesignInfo" width="12px"/>
+  </widget>
+  <widget name="label3" parent="Visitings" prefHeight="14px" prefWidth="24px" text="по :" type="LabelDesignInfo">
+    <constraints height="14px" left="156px" top="192px" type="MarginConstraintsDesignInfo" width="24px"/>
+  </widget>
+  <widget name="button10" parent="Visitings" prefHeight="23px" prefWidth="96px" text="Показать" toolTipText="&lt;нулевое значение&gt;" type="ButtonDesignInfo">
+    <constraints height="23px" left="300px" top="192px" type="MarginConstraintsDesignInfo" width="96px"/>
+  </widget>
+  <widget name="button11" parent="Visitings" prefHeight="23px" prefWidth="60px" text="ОК" type="ButtonDesignInfo">
+    <constraints bottom="67px" height="23px" left="168px" type="MarginConstraintsDesignInfo" width="60px"/>
+  </widget>
+  <widget name="label4" parent="Visitings" prefHeight="14px" prefWidth="156px" text="Сбросить критерии поиска" type="LabelDesignInfo">
+    <constraints bottom="76px" height="14px" left="24px" type="MarginConstraintsDesignInfo" width="156px"/>
+  </widget>
+  <widget name="Groups" parent="BasicPanel" prefHeight="378px" prefWidth="752px" type="PanelDesignInfo" visible="false">
+    <layout type="MarginLayoutDesignInfo"/>
+    <constraints tabTitle="Группы" type="TabsConstraintsDesignInfo"/>
+  </widget>
+  <widget name="modelGrid4" parent="Groups" prefHeight="348px" prefWidth="360px" type="DbGridDesignInfo">
+    <rowsColumnsDesignInfo>
+      <rowsDatasource entityId="138444877979471" field="false"/>
+    </rowsColumnsDesignInfo>
+    <treeDesignInfo/>
+    <column name="Нoмер группы">
+      <columnsDatasource/>
+      <columnsDisplayField/>
+      <cellsDatasource/>
+      <cellDesignInfo>
+        <rowsKeyField/>
+        <columnsKeyField/>
+        <cellValueField/>
+      </cellDesignInfo>
+      <controlInfo classHint="DbSpinDesignInfo" name="view" prefHeight="0px" prefWidth="0px"/>
+      <headerStyle>
+        <nativeFont name="Tahoma" size="11"/>
+      </headerStyle>
+      <datamodelElement entityId="138444877979471" fieldName="GROUP_ID"/>
+    </column>
+    <column name="Описание">
+      <columnsDatasource/>
+      <columnsDisplayField/>
+      <cellsDatasource/>
+      <cellDesignInfo>
+        <rowsKeyField/>
+        <columnsKeyField/>
+        <cellValueField/>
+      </cellDesignInfo>
+      <controlInfo classHint="DbLabelDesignInfo" name="view" prefHeight="0px" prefWidth="0px"/>
+      <headerStyle>
+        <nativeFont name="Tahoma" size="11"/>
+      </headerStyle>
+      <datamodelElement entityId="138444877979471" fieldName="NAME"/>
+    </column>
+    <constraints bottom="18px" left="372px" right="20px" top="12px" type="MarginConstraintsDesignInfo"/>
+  </widget>
+  <widget name="button12" parent="Groups" prefHeight="23px" prefWidth="144px" text="Добавить" type="ButtonDesignInfo">
+    <constraints height="23px" left="12px" top="12px" type="MarginConstraintsDesignInfo" width="144px"/>
+  </widget>
+  <widget name="button13" parent="Groups" prefHeight="23px" prefWidth="144px" text="Удалить" type="ButtonDesignInfo">
+    <constraints height="23px" left="12px" top="48px" type="MarginConstraintsDesignInfo" width="144px"/>
+  </widget>
+  <widget name="button14" parent="Groups" prefHeight="23px" prefWidth="144px" text="Сохранить" type="ButtonDesignInfo">
+    <constraints height="23px" left="12px" top="84px" type="MarginConstraintsDesignInfo" width="144px"/>
+  </widget>
+  <widget name="button15" parent="Groups" prefHeight="23px" prefWidth="77px" text="Найти" type="ButtonDesignInfo">
+    <constraints height="23px" left="12px" top="132px" type="MarginConstraintsDesignInfo" width="77px"/>
+  </widget>
+  <widget name="textField5" parent="Groups" prefHeight="20px" prefWidth="168px" type="TextFieldDesignInfo">
+    <constraints height="20px" left="96px" top="132px" type="MarginConstraintsDesignInfo" width="168px"/>
+  </widget>
+  <widget name="button26" parent="Groups" prefHeight="23px" prefWidth="144px" text="Показать всех" type="ButtonDesignInfo">
+    <constraints height="23px" left="12px" top="192px" type="MarginConstraintsDesignInfo" width="144px"/>
+  </widget>
+  <widget name="Commisions" parent="BasicPanel" prefHeight="378px" prefWidth="752px" type="PanelDesignInfo" visible="false">
+    <layout type="MarginLayoutDesignInfo"/>
+    <constraints tabTitle="Назначения" type="TabsConstraintsDesignInfo"/>
+  </widget>
+  <widget name="modelGrid5" parent="Commisions" prefHeight="348px" prefWidth="372px" type="DbGridDesignInfo">
+    <rowsColumnsDesignInfo>
+      <rowsDatasource entityId="138444876907574" field="false"/>
+    </rowsColumnsDesignInfo>
+    <treeDesignInfo/>
+    <column name="Номeр группы">
+      <columnsDatasource/>
+      <columnsDisplayField/>
+      <cellsDatasource/>
+      <cellDesignInfo>
+        <rowsKeyField/>
+        <columnsKeyField/>
+        <cellValueField/>
+      </cellDesignInfo>
+      <controlInfo classHint="DbSpinDesignInfo" name="view" prefHeight="0px" prefWidth="0px"/>
+      <headerStyle>
+        <nativeFont name="Tahoma" size="11"/>
+      </headerStyle>
+      <datamodelElement entityId="138444876907574" fieldName="GROUP_ID"/>
+    </column>
+    <column name="Номер воспитателя">
+      <columnsDatasource/>
+      <columnsDisplayField/>
+      <cellsDatasource/>
+      <cellDesignInfo>
+        <rowsKeyField/>
+        <columnsKeyField/>
+        <cellValueField/>
+      </cellDesignInfo>
+      <controlInfo classHint="DbSpinDesignInfo" name="view" prefHeight="0px" prefWidth="0px"/>
+      <headerStyle>
+        <nativeFont name="Tahoma" size="11"/>
+      </headerStyle>
+      <datamodelElement entityId="138444876907574" fieldName="ID OF TEACHER"/>
+    </column>
+    <constraints bottom="18px" left="372px" right="8px" top="12px" type="MarginConstraintsDesignInfo"/>
+  </widget>
+  <widget name="button19" parent="Commisions" prefHeight="23px" prefWidth="144px" text="Добавить" type="ButtonDesignInfo">
+    <constraints height="23px" left="12px" top="12px" type="MarginConstraintsDesignInfo" width="144px"/>
+  </widget>
+  <widget name="button20" parent="Commisions" prefHeight="23px" prefWidth="144px" text="Удалить" type="ButtonDesignInfo">
+    <constraints height="23px" left="12px" top="48px" type="MarginConstraintsDesignInfo" width="144px"/>
+  </widget>
+  <widget name="button21" parent="Commisions" prefHeight="23px" prefWidth="144px" text="Сохранить" type="ButtonDesignInfo">
+    <constraints height="23px" left="12px" top="84px" type="MarginConstraintsDesignInfo" width="144px"/>
+  </widget>
+  <widget name="button22" parent="Commisions" prefHeight="23px" prefWidth="77px" text="Найти" type="ButtonDesignInfo">
+    <constraints height="23px" left="12px" top="144px" type="MarginConstraintsDesignInfo" width="77px"/>
+  </widget>
+  <widget name="textField6" parent="Commisions" prefHeight="20px" prefWidth="192px" type="TextFieldDesignInfo">
+    <constraints height="20px" left="96px" top="144px" type="MarginConstraintsDesignInfo" width="192px"/>
+  </widget>
+  <widget name="button27" parent="Commisions" prefHeight="23px" prefWidth="144px" text="Показать всех" type="ButtonDesignInfo">
+    <constraints height="23px" left="12px" top="216px" type="MarginConstraintsDesignInfo" width="144px"/>
+  </widget>
+  <widget name="Staff" parent="BasicPanel" prefHeight="378px" prefWidth="752px" type="PanelDesignInfo" visible="false">
+    <layout type="MarginLayoutDesignInfo"/>
+    <constraints tabTitle="Персонал" type="TabsConstraintsDesignInfo"/>
+  </widget>
+  <widget name="modelGrid6" parent="Staff" prefHeight="192px" prefWidth="732px" type="DbGridDesignInfo">
+    <rowsColumnsDesignInfo>
+      <rowsDatasource entityId="138444886552853" field="false"/>
+    </rowsColumnsDesignInfo>
+    <treeDesignInfo/>
+    <column name="Номер сотрудника">
+      <columnsDatasource/>
+      <columnsDisplayField/>
+      <cellsDatasource/>
+      <cellDesignInfo>
+        <rowsKeyField/>
+        <columnsKeyField/>
+        <cellValueField/>
+      </cellDesignInfo>
+      <controlInfo classHint="DbSpinDesignInfo" name="view" prefHeight="0px" prefWidth="0px"/>
+      <headerStyle>
+        <nativeFont name="Tahoma" size="11"/>
+      </headerStyle>
+      <datamodelElement entityId="138444886552853" fieldName="SAFF_ID"/>
+    </column>
+    <column name="Фaмилия">
+      <columnsDatasource/>
+      <columnsDisplayField/>
+      <cellsDatasource/>
+      <cellDesignInfo>
+        <rowsKeyField/>
+        <columnsKeyField/>
+        <cellValueField/>
+      </cellDesignInfo>
+      <controlInfo classHint="DbLabelDesignInfo" name="view" prefHeight="0px" prefWidth="0px"/>
+      <headerStyle>
+        <nativeFont name="Tahoma" size="11"/>
+      </headerStyle>
+      <datamodelElement entityId="138444886552853" fieldName="SURNAME"/>
+    </column>
+    <column name="имя">
+      <columnsDatasource/>
+      <columnsDisplayField/>
+      <cellsDatasource/>
+      <cellDesignInfo>
+        <rowsKeyField/>
+        <columnsKeyField/>
+        <cellValueField/>
+      </cellDesignInfo>
+      <controlInfo classHint="DbLabelDesignInfo" name="view" prefHeight="0px" prefWidth="0px"/>
+      <headerStyle>
+        <nativeFont name="Tahoma" size="11"/>
+      </headerStyle>
+      <datamodelElement entityId="138444886552853" fieldName="NAME"/>
+    </column>
+    <column name="Oтчество">
+      <columnsDatasource/>
+      <columnsDisplayField/>
+      <cellsDatasource/>
+      <cellDesignInfo>
+        <rowsKeyField/>
+        <columnsKeyField/>
+        <cellValueField/>
+      </cellDesignInfo>
+      <controlInfo classHint="DbLabelDesignInfo" name="view" prefHeight="0px" prefWidth="0px"/>
+      <headerStyle>
+        <nativeFont name="Tahoma" size="11"/>
+      </headerStyle>
+      <datamodelElement entityId="138444886552853" fieldName="PATRONYMIC"/>
+    </column>
+    <column name="Должность">
+      <columnsDatasource/>
+      <columnsDisplayField/>
+      <cellsDatasource/>
+      <cellDesignInfo>
+        <rowsKeyField/>
+        <columnsKeyField/>
+        <cellValueField/>
+      </cellDesignInfo>
+      <controlInfo classHint="DbLabelDesignInfo" name="view" prefHeight="0px" prefWidth="0px"/>
+      <headerStyle>
+        <nativeFont name="Tahoma" size="11"/>
+      </headerStyle>
+      <datamodelElement entityId="138444886552853" fieldName="SPECIALITY"/>
+    </column>
+    <column name="Aдрес регистрации">
+      <columnsDatasource/>
+      <columnsDisplayField/>
+      <cellsDatasource/>
+      <cellDesignInfo>
+        <rowsKeyField/>
+        <columnsKeyField/>
+        <cellValueField/>
+      </cellDesignInfo>
+      <controlInfo classHint="DbLabelDesignInfo" name="view" prefHeight="0px" prefWidth="0px"/>
+      <headerStyle>
+        <nativeFont name="Tahoma" size="11"/>
+      </headerStyle>
+      <datamodelElement entityId="138444886552853" fieldName="REGISTRATION ADDRESS"/>
+    </column>
+    <column name="Нoмер телефона">
+      <columnsDatasource/>
+      <columnsDisplayField/>
+      <cellsDatasource/>
+      <cellDesignInfo>
+        <rowsKeyField/>
+        <columnsKeyField/>
+        <cellValueField/>
+      </cellDesignInfo>
+      <controlInfo classHint="DbLabelDesignInfo" name="view" prefHeight="0px" prefWidth="0px"/>
+      <headerStyle>
+        <nativeFont name="Tahoma" size="11"/>
+      </headerStyle>
+      <datamodelElement entityId="138444886552853" fieldName="TELEPHONE NUMBER"/>
+    </column>
+    <constraints bottom="174px" left="12px" right="8px" top="12px" type="MarginConstraintsDesignInfo"/>
+  </widget>
+  <widget name="button28" parent="Staff" prefHeight="23px" prefWidth="144px" text="Добавить" type="ButtonDesignInfo">
+    <constraints bottom="91px" height="23px" left="12px" type="MarginConstraintsDesignInfo" width="144px"/>
+  </widget>
+  <widget actionPerformed="button29ActionPerformed" name="button29" parent="Staff" prefHeight="23px" prefWidth="144px" text="Удалить" type="ButtonDesignInfo">
+    <constraints bottom="91px" height="23px" left="168px" type="MarginConstraintsDesignInfo" width="144px"/>
+  </widget>
+  <widget name="button30" parent="Staff" prefHeight="23px" prefWidth="144px" text="Сохранить" type="ButtonDesignInfo">
+    <constraints bottom="91px" height="23px" left="324px" type="MarginConstraintsDesignInfo" width="144px"/>
+  </widget>
+  <widget name="button31" parent="Staff" prefHeight="23px" prefWidth="77px" text="Найти" type="ButtonDesignInfo">
+    <constraints bottom="55px" height="23px" left="12px" type="MarginConstraintsDesignInfo" width="77px"/>
+  </widget>
+  <widget name="button32" parent="Staff" prefHeight="23px" prefWidth="144px" text="Показать всех" type="ButtonDesignInfo">
+    <constraints bottom="19px" height="23px" left="12px" type="MarginConstraintsDesignInfo" width="144px"/>
+  </widget>
+  <widget name="textField7" parent="Staff" prefHeight="20px" prefWidth="216px" type="TextFieldDesignInfo">
+    <constraints bottom="58px" height="20px" left="96px" type="MarginConstraintsDesignInfo" width="216px"/>
+  </widget>
+  <layout type="MarginLayoutDesignInfo"/>
+</layout>

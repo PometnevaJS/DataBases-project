@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?><datamodel datamodelDbId="null">
   <fieldsEntity entityHeight="199" entityIconified="false" entityId="138374429765694" entityLocationX="4" entityLocationY="3" entityWidth="150" tableName="Children"/>
   <fieldsEntity entityHeight="202" entityIconified="false" entityId="138374732668790" entityLocationX="211" entityLocationY="251" entityWidth="150" tableName="Commisions"/>
+  <fieldsEntity entityHeight="200" entityIconified="false" entityId="138444838804463" entityLocationX="413" entityLocationY="205" entityWidth="150" tableName="Payment"/>
   <fieldsEntity entityHeight="200" entityIconified="false" entityId="138374672754629" entityLocationX="382" entityLocationY="-1" entityWidth="150" tableName="Staff"/>
-  <fieldsEntity entityHeight="200" entityIconified="false" entityId="138374713850011" entityLocationX="13" entityLocationY="225" entityWidth="150" tableName="Groups"/>
-  <fieldsEntity entityHeight="161" entityIconified="false" entityId="138374634818784" entityLocationX="190" entityLocationY="70" entityWidth="150" tableName="Parents"/>
+  <fieldsEntity entityHeight="200" entityIconified="false" entityId="138374713850011" entityLocationX="17" entityLocationY="243" entityWidth="150" tableName="Groups"/>
+  <fieldsEntity entityHeight="200" entityIconified="false" entityId="138444773206081" entityLocationX="593" entityLocationY="175" entityWidth="150" tableName="Visitings"/>
+  <fieldsEntity entityHeight="161" entityIconified="false" entityId="138374634818784" entityLocationX="211" entityLocationY="7" entityWidth="150" tableName="Parents"/>
 </datamodel>
